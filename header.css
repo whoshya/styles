@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .container {
@@ -22,3 +23,34 @@
 .container__imagem {
     padding: 1em;
 }
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 75vw;
+    border-radius: 0 0 20px 20px; 
+    background-color: var(--rosa);
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;   
+}
+
+.lista-menu__titulo { 
+    color: var(--vermelho)
+}
+
+.lista-menu__link {
+    background: var(--magenta);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
